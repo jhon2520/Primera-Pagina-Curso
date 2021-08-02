@@ -66,6 +66,7 @@ label{
 
     width: 20px;
     border: none;
+    background-color: teal;
 }
 
 .confirmarEdad{
@@ -88,6 +89,29 @@ label{
     font-size: 14px;
 }
 
+.tooltip{
+    font-weight: normal;
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+.tooltipBox{
+    display: none;
+    position: absolute;
+    background: white;
+    line-height: 20px;
+    z-index: 500;
+    text-align: center;
+    color: black;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    left: 0;
+    right: 0;
+    bottom: 28px;
+}
+
+
 /* Eventos */
 
 #btnValidar:hover{
@@ -102,5 +126,24 @@ input:hover{
     cursor: pointer;
     background: rgba(0, 0, 0, 0.5);
 
+}
+
+.tooltip:hover{
+    text-decoration: underline;
+}
+
+.tooltip:hover .tooltipBox{
+    display: inline-block;
+}
+
+.tooltipBox::after{
+    content: "";
+    display: block;
+    border-top: 7px solid white;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    position: absolute;
+    bottom: -7px;
+    left: Calc(50% - 7px);
 }
 
