@@ -3,11 +3,22 @@
     padding: 0;
     color: white;
     font-family: 'Inconsolata', monospace;
+    box-sizing: border-box;
 }
 
 ::placeholder{
-    color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.6);
 }
+
+.imagenSuperior{
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    top: 0;
+
+}
+
 
 body{
     background-image: url(/src/assets/loginImg.jpg);
@@ -20,7 +31,7 @@ body{
     background: rgba(255, 255, 255, 0.25);
     width: 400px;
     margin: auto;
-    margin-top: 16%;
+    margin-top: 15%;
     padding: 5px 20px;
     box-sizing: border-box;
     border-radius: 8px;
@@ -45,15 +56,18 @@ input{
     text-align: center;
     border-radius: 5px;
     border:  1px solid white;
-    background: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.15);
 }
 
 #btnValidar{
+
     margin-top: 10px;
-    background: teal;
+    background: rgb(1, 109, 109);
     border: 1px solid teal;
     color: white;
     border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #f9e506;
+    transition: ease-out 0.3s;
 }
 
 label{
@@ -66,7 +80,7 @@ label{
 
     width: 20px;
     border: none;
-    background-color: teal;
+
 }
 
 .confirmarEdad{
@@ -78,8 +92,9 @@ label{
     background: rgba(255, 255, 255, 0.16);
     padding: 15px 15px;
     border-radius: 5px;
-    width: 1200px;
+    width: 90%;
     margin: auto;
+    margin-bottom: 1%;
     text-align: justify;
     font-size: 11px;
     box-sizing: border-box;
@@ -110,12 +125,42 @@ label{
     right: 0;
     bottom: 28px;
 }
+.social{
+    
+    width: 40%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.social img{
+    width: 5%;
+    margin-right: 2%;
+    margin-bottom: 10%;
+    border-radius: 50%;
+}
+
+.registro{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+}
 
 
 /* Eventos */
 
+.registro:hover{
+    font-size: 17px;
+}
+
+.social img:hover{
+    box-shadow: 1px 1px 15px 3px;
+}
+
 #btnValidar:hover{
     cursor: pointer;
+    box-shadow: inset 370px 0 0 0 grey;
     background: rgba(0, 0, 0, 0.5);
     color: rgb(100, 225, 225);
     border: 1px solid white;
